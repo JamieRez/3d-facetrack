@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='css/brfv4_examples_theme.css')
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+    title Beyond Reality Face - BRFv4 - HTML5/Javascript face tracking
+  body
+    //- .main
+    //-   .content
+    //-     .cube
+    //-       //- .cube__face.cube__face--front
+    //-       //-   .cube_face_label front
+    //-       .cube__face.cube__face--back
+    //-         .cube_face_label back
+    //-       .cube__face.cube__face--right
+    //-         .cube_face_label right
+    //-       .cube__face.cube__face--left
+    //-         .cube_face_label left
+    //-       .cube__face.cube__face--top
+    //-         .cube_face_label top
+    //-       .cube__face.cube__face--bottom
+    //-         .cube_face_label bottom
+      
+      
+    #_wrapper(hidden)
+      #_content
+        video#_webcam(playsinline='')
+        canvas#_imageData
+        canvas#_faceSub
+        canvas#_t3d
+        canvas#_f3d
+        canvas#_drawing
+          
+  script(src='js/jquery-3.3.1.min.js')
+  script(src='js/three.min.js')
+  script(src='js/main.js')
+  script(src='js/libs/createjs/preloadjs.min.js')
+  script(src='js/BRFv4Demo.js')
+  script.
+    window.onload = brfv4Example.start; //see js/BRFv4Demo.js
